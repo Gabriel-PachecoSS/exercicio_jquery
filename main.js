@@ -15,12 +15,15 @@ $(document).ready(function(){
         $(`
             <div class="overlay-imagem-link">
                 <a>
-                    <input type="checkbox" id="botao-tarefa"></input>  ${tarefaNova}
+                    git${tarefaNova}
                 </a>
             </div>
         `).appendTo(novoItem);
         $(novoItem).appendTo('ul');
         $('#nova-tarefa').val('');
     })
+    $("ul").on("click", "li", function() {
+        $(this).css("text-decoration", "line-through");
+    });
 })    
 
